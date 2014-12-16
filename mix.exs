@@ -15,7 +15,7 @@ defmodule TrelloSummaries.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {TrelloSummaries, []},
-     applications: [:phoenix, :cowboy, :logger]]
+     applications: [:phoenix, :cowboy, :logger, :jsx, :httpoison]]
   end
 
   # Specifies your project dependencies
@@ -23,6 +23,8 @@ defmodule TrelloSummaries.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [{:phoenix, github: "phoenixframework/phoenix"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:daily_trello, github: "paulanthonywilson/daily_trello"},
+   ]
   end
 end

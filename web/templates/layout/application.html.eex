@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="What's it to you, pal?">
+    <meta name="author" content="Bob the fictional guy">
 
-    <title>Hello Phoenix!</title>
-    <link rel="stylesheet" href="/css/phoenix.css">
+    <title>1337 Trello Sumariez</title>
+    <link rel="stylesheet" href="/css/trellosummaries.css">
   </head>
 
   <body>
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
+          <li><a href="/trellos?ids=GVQX28Rc,PuCdOMxz,RLJZxTqt,wIA2goPf,DQkEdQqg,8Ldauhwg,mDbC5yWZ">Get Started</a></li>
         </ul>
         <span class="logo"></span>
       </div>
@@ -23,7 +23,7 @@
       <%= @inner %>
 
       <div class="footer">
-        <p><a href="http://phoenixframework.org">phoenixframework.org</a></p>
+        <p><a href="http://cultivatehq.com">Cultivate</a></p>
       </div>
 
     </div> <!-- /container -->
