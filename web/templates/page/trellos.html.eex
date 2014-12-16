@@ -1,15 +1,28 @@
 <p>Hi there</p>
 
+
 <table class="board">
   <thead>
     <th>
       Board
     </th>
+    <%= for board <- @boards do %>
+    <th><%= board %></th>
+    <%= end %>
   </thead>
   <tbody>
   <%= for trello <- @trellos do %>
   <tr>
     <td class="board_name"><%= trello.board_name %> </td>
+    <%= for board <- @boards do %>
+      <td class="board_queu">
+      <ol>
+        <%= for card <- trello.cards[board] || [] do %>
+          <li><%= card.name %> </li>
+        <%= end %>
+      </ol>
+    </td>
+    <%= end %>
   </tr>
   <%= end %>
   </tbody>

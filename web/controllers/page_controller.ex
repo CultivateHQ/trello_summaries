@@ -21,6 +21,7 @@ defmodule TrelloSummaries.PageController do
 
     conn
       |> assign(:trellos, trellos)
+      |> assign(:boards, ["For Triage", "To Do", "Blocked", "Doing", "Pull Request Submitted", "Ready for Sign-off"])
       |> render("trellos.html")
   end
 
