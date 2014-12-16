@@ -12,12 +12,16 @@ defmodule TrelloSummaries.PageController do
   def trellos(conn, params) do
     ids = params["ids"] |> String.split(",")
 
-      ids |> Enum.map(fn(id) ->
-        IO.puts fetch({:board_name, {id}}, {trello_key, trello_token}) |> decode |> inspect
+     trellos =  ids |> Parallel.pmap(fn(id) ->
+        %{board_name: fetch({:board_name, {id}}, {trello_key, trello_token}) |> decode,
+          cards: fetch({:board_lists, {id}}, {trello_key, trello_token}) |> decode,
+          }
       end
     )
 
-    render conn, "index.html"
+    conn
+      |> assign(:trellos, trellos)
+      |> render("trellos.html")
   end
 
   defp trello_key do

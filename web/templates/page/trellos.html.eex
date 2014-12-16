@@ -1,0 +1,16 @@
+<p>Hi there</p>
+
+<table class="board">
+  <thead>
+    <th>
+      Board
+    </th>
+  </thead>
+  <tbody>
+  <%= for trello <- @trellos do %>
+  <tr>
+    <td class="board_name"><%= trello.board_name %> </td>
+  </tr>
+  <%= end %>
+  </tbody>
+</table>
