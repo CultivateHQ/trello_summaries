@@ -11,7 +11,7 @@
   <tbody>
   <%= for trello <- @trellos do %>
   <tr>
-    <td class="board_name"><%= trello.board_name %> </td>
+    <td class="board_name"><a href="https://trello.com/b/<%=trello.board_id%>"><%=trello.board_name%></a> </td>
     <%= for board <- @boards do %>
       <td class="board_queu">
       <ol>

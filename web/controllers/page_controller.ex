@@ -14,6 +14,7 @@ defmodule TrelloSummaries.PageController do
 
      trellos =  ids |> Parallel.pmap(fn(id) ->
         %{board_name: fetch({:board_name, {id}}, {trello_key, trello_token}) |> decode,
+          board_id: id,
           cards: fetch({:board_lists, {id}}, {trello_key, trello_token}) |> decode,
           }
       end
