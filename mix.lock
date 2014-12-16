@@ -1,0 +1,6 @@
+%{"cowboy": {:package, "1.0.0"},
+  "cowlib": {:package, "1.0.0"},
+  "phoenix": {:git, "git://github.com/phoenixframework/phoenix.git", "87ce6206902bb7aa53141905fad268b6145125eb", []},
+  "plug": {:package, "0.9.0"},
+  "poison": {:package, "1.3.0"},
+  "ranch": {:package, "1.0.0"}}
