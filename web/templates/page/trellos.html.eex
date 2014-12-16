@@ -1,6 +1,3 @@
-<p>Hi there</p>
-
-
 <table class="board">
   <thead>
     <th>
@@ -9,6 +6,7 @@
     <%= for board <- @boards do %>
     <th><%= board %></th>
     <%= end %>
+    <th>Done Count</th>
   </thead>
   <tbody>
   <%= for trello <- @trellos do %>
@@ -23,6 +21,9 @@
       </ol>
     </td>
     <%= end %>
+    <td>
+      <%= (trello.cards["Done"] || []) |> length %>
+    </td>
   </tr>
   <%= end %>
   </tbody>
