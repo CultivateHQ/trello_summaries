@@ -1,6 +1,6 @@
 %{"cowboy": {:hex, :cowboy, "1.0.0"},
   "cowlib": {:hex, :cowlib, "1.0.0"},
-  "daily_trello": {:git, "git://github.com/paulanthonywilson/daily_trello.git", "359625eb0fd49d809dc39d3c471f981a273c4baf", []},
+  "daily_trello": {:git, "git://github.com/CultivateHQ/daily_trello.git", "359625eb0fd49d809dc39d3c471f981a273c4baf", []},
   "hackney": {:hex, :hackney, "0.14.3"},
   "httpoison": {:hex, :httpoison, "0.4.3"},
   "idna": {:hex, :idna, "1.0.1"},

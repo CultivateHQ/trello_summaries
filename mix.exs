@@ -24,7 +24,7 @@ defmodule TrelloSummaries.Mixfile do
   defp deps do
     [{:phoenix, github: "phoenixframework/phoenix"},
      {:cowboy, "~> 1.0"},
-     {:daily_trello, github: "paulanthonywilson/daily_trello"},
+     {:daily_trello, github: "CultivateHQ/daily_trello"},
    ]
   end
 end
