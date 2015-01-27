@@ -6,7 +6,7 @@
     <%= for board <- @boards do %>
     <th><%= board %></th>
     <%= end %>
-    <th>Done Count</th>
+    <th>Done</th>
   </thead>
   <tbody>
   <%= for trello <- @trellos do %>
@@ -16,13 +16,25 @@
       <td class="board_queu">
       <ol>
         <%= for card <- trello.cards[board] || [] do %>
-          <li><%= card.name %> </li>
-        <%= end %>
-      </ol>
-    </td>
-    <%= end %>
-    <td>
-      <%= (trello.cards["Done"] || []) |> length %>
+      <li><%= card.name %>  
+      </li>
+      <%= end %>
+    </ol>
+  </td>
+  <%= end %>
+  <td>
+    <h4>Recently active (4 days)</h4>
+    <p>
+    <ol>
+    <%= for card <-  (trello.cards["Done"] || []) |> TrelloSummaries.DateFilter.filter_cards_by_age(4) do %>
+    <li> <%= card.name %> </li>
+    <% end %>
+    </ol>
+    </p>
+    <h4>Total</h4>
+    <p>
+    <%= (trello.cards["Done"] || []) |> length %>
+    </p>
     </td>
   </tr>
   <%= end %>
