@@ -7,3 +7,8 @@ table.board td, table.board th {
     border: 1px solid #aaa;
 }
 
+
+table.board td{
+    vertical-align: text-top;
+    padding: 1em 0.5em;
+}
