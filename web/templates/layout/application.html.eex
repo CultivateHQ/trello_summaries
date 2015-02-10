@@ -7,7 +7,7 @@
     <meta name="description" content="What's it to you, pal?">
     <meta name="author" content="Bob the fictional guy">
 
-    <title>1337 Trello Sumariez</title>
+    <title><%= TrelloSummaries.Title.title %></title>
     <link rel="stylesheet" href="/css/trellosummaries.css?12231">
   </head>
 
